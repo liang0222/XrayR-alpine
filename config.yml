@@ -21,7 +21,7 @@ Nodes:
       Timeout: 30
       EnableVless: false
       EnableXTLS: false
-      SpeedLimit: 10  #限速10M
+      SpeedLimit: 10  #每个用户限速10M
 
     ControllerConfig:
       ListenIP: 0.0.0.0
