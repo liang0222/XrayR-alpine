@@ -1,0 +1,38 @@
+cat >> /etc/XrayR/config.yml <<EOF
+Log:
+  Level: warning
+  AccessPath: 
+  ErrorPath: 
+
+DnsConfigPath: 
+RouteConfigPath: 
+
+OutboundConfig:
+  Enable: false
+
+Nodes:
+  -
+    PanelType: "NewV2board"
+    ApiConfig:
+      ApiHost: "" 
+      ApiKey: ""
+      NodeID: 2
+      NodeType: Shadowsocks
+      Timeout: 30
+      EnableVless: false
+      EnableXTLS: false
+
+    ControllerConfig:
+      ListenIP: 0.0.0.0
+      SendIP: 0.0.0.0
+      UpdatePeriodic: 60
+      EnableDNS: false
+      DNSType: AsIs
+      EnableProxyProtocol: false
+      EnableSniffing: false
+      AutoSpeedLimitConfig:
+        Limit: 0
+        WarnTimes: 0
+        LimitSpeed: 0
+        LimitDuration: 0
+EOF
