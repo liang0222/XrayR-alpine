@@ -21,6 +21,7 @@ Nodes:
       Timeout: 30
       EnableVless: false
       EnableXTLS: false
+      SpeedLimit: 10  #限速10M
 
     ControllerConfig:
       ListenIP: 0.0.0.0
@@ -31,8 +32,8 @@ Nodes:
       EnableProxyProtocol: false
       EnableSniffing: false
       AutoSpeedLimitConfig:
-        Limit: 0
+        Limit: 50 #到达50M限速10M
         WarnTimes: 0
-        LimitSpeed: 0
-        LimitDuration: 0
+        LimitSpeed: 10 #限速10M
+        LimitDuration: 5 #限速5分钟
 EOF
